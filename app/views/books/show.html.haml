@@ -2,6 +2,7 @@
 
 %h1= @book.title
 %p= 'By ' + @book.author
+= image_tag @book.cover_image.to_s
 %p= link_to 'Buy this book', @book.link
 
 %p
