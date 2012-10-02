@@ -1,0 +1,20 @@
+= render 'error_messages'
+
+= f.label :title 
+= f.text_field :title 
+
+= f.label :slug 
+= f.text_field :slug 
+ 
+= f.label :main_image
+= f.file_field :main_image
+
+= f.label :body 
+= f.text_area :body, :rows => 5
+
+= f.label 'Category'
+= collection_select :article, :category_ids, @categories, :id, :name, { :selected => @article.category_ids }, { :multiple => true, :name => 'article[category_ids][]' }
+
+= f.label :excerpt
+= f.text_area :excerpt, :rows => 5
+

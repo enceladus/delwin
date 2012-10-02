@@ -1,0 +1,13 @@
+- provide :title, 'Yes, I *have* read ' + @book.title
+
+%h1= @book.title
+%p= 'By ' + @book.author
+%p= link_to 'Buy this book', @book.link
+
+%p
+	%strong Here's what it's about:
+%p= @book.summary
+
+%p 
+	%strong And here's what I thought:
+%p= @book.description

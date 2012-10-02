@@ -1,0 +1,10 @@
+- provide :title, 'Browse by category'
+
+%h2 Browse by category
+
+%p Here is a list of all the categories.
+
+%ul.category-list
+	- @categories.each do |c|
+		= link_to c.name, category_path(c)
+

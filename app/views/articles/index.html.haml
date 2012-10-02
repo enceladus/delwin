@@ -1,0 +1,16 @@
+%h2
+	All the posts
+= link_to 'Add new post', new_article_path
+	
+- @articles.each do |article|
+	%section.article
+		%h1= link_to article.title, article_path(article)
+		= image_tag article.main_image.to_s
+		%section.content= article.body
+		.categories 
+			%strong Categories: 
+			- article.categories.each do |c|
+				= c.name
+			
+		
+	

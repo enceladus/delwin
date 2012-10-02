@@ -1,0 +1,13 @@
+- provide :title, 'Books'
+
+%h2 Books I've read
+%p= link_to 'Add a book', new_book_path
+%section.book-list
+	- @books.each do |b|
+		%h1= link_to b.title, book_path(b)
+		%p
+			Some hotshot named
+			= b.author
+			wrote this.
+		%p= b.summary
+		

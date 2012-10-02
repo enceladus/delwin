@@ -1,0 +1,9 @@
+- provide :title, 'New article'
+
+%h1 New article
+
+.row
+	.span9
+		= form_for @article do |f|
+			= render 'fields', f: f
+			.submit= f.submit 'Post article', class: 'btn btn-large btn-primary'

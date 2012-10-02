@@ -1,0 +1,9 @@
+- provide :title, 'New book review'
+
+%h1 New book review
+
+.row
+	.span9
+		= form_for @book do |f|
+			= render 'fields', f: f
+			.submit= f.submit 'Post book review', class: 'btn btn-large btn-primary'

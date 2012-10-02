@@ -1,0 +1,5 @@
+%section.article
+	%h1= @article.title
+	= image_tag @article.main_image.to_s
+	%section.content= @article.body
+	= link_to "Edit this article", edit_article_path

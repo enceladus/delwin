@@ -1,0 +1,9 @@
+- provide :title, 'New category'
+
+%h1 New category
+
+.row
+	.span9
+		= form_for @category do |f|
+			= render 'fields', f: f
+			.submit= f.submit 'Add category', class: 'btn btn-large btn-primary'
